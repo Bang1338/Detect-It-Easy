@@ -1,0 +1,20 @@
+// DIE's signature file
+// Author: bang1338/BGSPA
+
+init("database","Interactive Disassembler Database");
+
+function detect(bShowType,bShowVersion,bShowOptions)
+{
+    if(Binary.compare("'IDA1'"))
+    {
+		sVersion="x86";
+        bDetected=1;
+    }
+	if(Binary.compare("'IDA2'"))
+    {
+		sVersion="x64";
+        bDetected=1;
+    }
+
+    return result(bShowType,bShowVersion,bShowOptions);
+}

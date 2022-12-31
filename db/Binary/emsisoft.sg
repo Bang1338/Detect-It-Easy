@@ -1,0 +1,14 @@
+// DIE's signature file
+// Author: bang1338/BGSPA
+
+init("signature","Emsisoft Signature");
+
+function detect(bShowType,bShowVersion,bShowOptions)
+{
+    if(Binary.compare("'EMS2'"))
+    {
+        bDetected=1;
+    }
+
+    return result(bShowType,bShowVersion,bShowOptions);
+}
